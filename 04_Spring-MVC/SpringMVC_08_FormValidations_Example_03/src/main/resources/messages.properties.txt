@@ -1,0 +1,4 @@
+user.name.empty=Name entered is invalid. It must be between {2} and {1} characters.
+user.email.invalid=Enter a valid email id.
+user.languages.empty=Select at least one language.
+user.gender.empty=Select gender.

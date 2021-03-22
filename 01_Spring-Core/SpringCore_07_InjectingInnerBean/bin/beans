@@ -1,0 +1,23 @@
+we can use beans.xml in two ways :
+case : 1
+
+	<bean id="atm" class="com.springcore.iib.bean.ATM">
+	<property name="printer">
+	
+	<bean id="hp" class="com.springcore.iib.bean.HPPrinter"></bean>
+	
+	<!-- <bean id="sony" class="com.springcore.iib.bean.SonyPrinter"></bean> -->
+	
+	</property>
+	</bean>
+
+	case : 2
+	
+	<bean id="hp" class="com.springcore.iib.bean.HPPrinter"></bean>
+	
+	<bean id="sony" class="com.springcore.iib.bean.SonyPrinter"></bean>
+	
+	<bean id="atm" class="com.springcore.iib.bean.ATM">
+	<property name="printer" ref="hp"></property>
+	</bean>
+	

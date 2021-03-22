@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="robot" class="com.springcore.baw.bytype.bean.Robot" autowire="byType">
+		<property name="robotId" value="A.X.L-01"></property>
+		<property name="robotType" value="Military Robot"></property>
+	</bean>	
+	
+	<bean id="chip-32" class="com.springcore.baw.bytype.bean.Chip" autowire-candidate="false">
+		<property name="chipId" value="ARM51"></property>
+		<property name="chipType" value="32-Bit"></property>
+	</bean>
+	
+	<!-- <bean id="chip-32" class="com.springcore.baw.bytype.bean.Chip" primary="true">
+		<property name="chipId" value="ARM51"></property>
+		<property name="chipType" value="32-Bit"></property>
+	</bean> -->
+	
+	<bean id="chip-64" class="com.springcore.baw.bytype.bean.Chip">
+		<property name="chipId" value="ARM82"></property>
+		<property name="chipType" value="64-Bit"></property>
+	</bean>
+	
+	<!-- if we use autowire-candidate="false" its skip 
+	present bean execute next bean
+	if we use primary="true" it execute present bean 
+	and skip the remaining beans  -->
+	
+	
+	
+</beans>

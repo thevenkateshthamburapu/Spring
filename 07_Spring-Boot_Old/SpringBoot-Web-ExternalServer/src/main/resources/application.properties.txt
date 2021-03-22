@@ -1,0 +1,12 @@
+#Server Port No
+server.port=7070
+#if we use this we need to pass the project name in i.e http://localhost:7070/SpringBootXServer/wish
+server.context-path=/SpringBootXServer
+
+#View Resolver Properties
+spring.mvc.view.prefix=/views/
+spring.mvc.view.suffix=.jsp
+
+server.compression.enabled: true
+server.compression.min-response-size: 1
+server.jetty.acceptors=2

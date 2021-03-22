@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="datasource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521/XE" />
+		<property name="username" value="system" />
+		<property name="password" value="manager" />
+	</bean>
+	
+	<bean id="simplejdbcinsert" class="org.springframework.jdbc.core.simple.SimpleJdbcInsert">
+		<constructor-arg name="dataSource" ref="datasource"></constructor-arg>
+	</bean>
+	
+	<bean id="playersdao" class="com.springjdbc.sji.dao.PlayersDao">
+		<property name="sji" ref="simplejdbcinsert"></property>
+	</bean>
+
+</beans>

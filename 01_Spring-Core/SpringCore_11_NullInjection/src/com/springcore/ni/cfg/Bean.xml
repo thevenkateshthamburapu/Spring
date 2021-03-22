@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="movie" class="com.springcore.ni.bean.Movie">
+		<constructor-arg name="hero" value="Vijay Deverakonda"></constructor-arg>
+		<constructor-arg name="movieId" value="GA2"></constructor-arg>
+		<constructor-arg name="heroine" value="Rashmika Mandanna"></constructor-arg>
+		<constructor-arg name="movieName">
+			<null></null>
+		</constructor-arg>
+	</bean>
+	
+</beans>

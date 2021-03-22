@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="personinfo" class="com.springcore.ba.bean.PersonInfo">
+	<property name="personName" value="Venkatesh"></property>
+	<property name="mobileNo" value="8838383876"></property>
+	<property name="email" value="venky4789@yahoo.com"></property>
+	</bean>
+	
+	<bean id="address" class="com.springcore.ba.bean.ShippingAddress">
+	<property name="area" value="State Home"></property>	
+	<property name="city" value="Hyderabad"></property>
+	<property name="country" value="India"></property>
+	<property name="state" value="Andhra Pradesh"></property>
+	<property name="zipcode" value="5300"></property>
+	</bean>
+
+	<bean id="orderinfo" class="com.springcore.ba.bean.OrderInfo">
+	
+	<property name="items">
+		<set value-type="java.lang.String">
+			<value>Phone</value>
+			<value>laptop</value>
+		</set>
+	</property>
+	
+	<property name="orderId" value="AMZN5648778"></property>
+	<property name="orderPrice" value="85499.00"></property>
+	</bean>
+	
+	<!-- BLUE DART Service is Offline(Closed). -->
+	
+	<!-- <bean id="bluedart" class="com.springcore.ba.bean.BlueDartDeliveryService"></bean> -->
+	
+	<bean id="dtdc" class="com.springcore.ba.bean.DTDCDeliveryService"></bean>
+	
+	<bean id="ordermanager" class="com.springcore.ba.bean.OrderManager">
+	<property name="addr" ref="address"></property>
+	<property name="blueDartDelivery" ref="bluedart"></property>
+	<property name="dtdcDelivery" ref="dtdc"></property>
+	<property name="order" ref="orderinfo"></property>
+	<property name="person" ref="personinfo"></property>
+	</bean>
+	
+	<!-- if BLUE DART Service is Offline(Closed). we
+	need not to change the Source code. add bean alias 
+	change the service -->
+	
+	<alias name="dtdc" alias="bluedart"/>
+	
+
+</beans>

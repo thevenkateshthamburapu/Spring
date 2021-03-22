@@ -1,0 +1,14 @@
+create table cricket_players(player_id number(10) primary key,
+player_name varchar2(50),player_age number(10))
+			
+			or
+
+create table cricket_players(player_id number(10)
+player_name varchar2(50),player_age number(10)
+primary key(player_id)
+)			
+
+
+---//.....inser some data...///----
+
+CREATE OR REPLACE PROCEDURE GET_PLAYER_BY_ID(PLAYERID IN NUMBER,PLAYERNAME OUT VARCHAR2) AS BEGIN SELECT PLAYER_NAME INTO PLAYERNAME FROM cricket_players WHERE PLAYER_ID=PLAYERID; END;

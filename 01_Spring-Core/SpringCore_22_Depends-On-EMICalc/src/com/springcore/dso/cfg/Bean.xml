@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="cache" class="com.springcore.dso.bean.Cache"></bean>
+	
+	<bean id="cm" class="com.springcore.dso.bean.CacheManager">
+		<constructor-arg name="cache" ref="cache"></constructor-arg>
+	</bean>
+	
+	<bean id="lc" class="com.springcore.dso.bean.LoanCalculator" depends-on="cm">
+		<property name="cache" ref="cache"></property>
+	</bean>
+	
+</beans>

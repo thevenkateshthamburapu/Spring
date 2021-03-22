@@ -1,0 +1,112 @@
+XML:
+====
+Add Request(POST)
+-----------
+url:http://localhost:8989/SpringREST_01_IntegrationApp/rest/add
+Request Body:
+
+<user>
+	<userId>101</userId>
+	<userName>Raju</userName>
+	<gender>Male</gender>
+	<email>Raj@gmail.com</email>
+</user>
+
+Response Body:
+
+User Added Successfully!
+
+GET Request(GET)
+-----------
+url:http://localhost:8989/SpringREST_01_IntegrationApp/rest/get?uid=101
+
+Response Body:
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<<user>
+	<userId>101</userId>
+	<userName>Raju</userName>
+	<email>Raj@gmail.com</email>
+	<gender>Male</gender>
+</user>
+
+UPDATE Request(PUT)
+-----------
+url:http://localhost:8989/SpringREST_01_IntegrationApp/rest/update?uid=101
+Request Body:
+
+<user>
+	<userId>101</userId>
+	<userName>Ravi</userName>
+	<gender>Male</gender>
+	<email>ravi@gmail.com</email>
+</user>
+
+Response Body:
+
+User Updated Successfully!
+
+DELETE Request(DELETE)
+-----------
+url:http://localhost:8989/SpringREST_01_IntegrationApp/rest/delete?uid=101
+
+Response Body:
+
+User Deleted Successfully!
+
+JSON
+====
+Add Request(POST)
+-----------
+url:http://localhost:8989/SpringREST_01_IntegrationApp/rest/add
+Request Body:
+
+{
+  "userId":101,
+  "userName":"Raju",
+  "email":"Raju@gmail.com",
+  "gender":"Male"
+}
+
+Response Body:
+
+User Added Successfully!
+
+GET Request(GET)
+-----------
+url:http://localhost:8989/SpringREST_01_IntegrationApp/rest/get?uid=101
+Header->Accept:application/json
+Response Body:
+
+{
+"userId": 101,
+"userName": "Raju",
+"email": "Raju@gmail.com",
+"gender": "Male"
+}
+
+UPDATE Request(PUT)
+-----------
+url:http://localhost:8989/SpringREST_01_IntegrationApp/rest/update?uid=101
+Request Body:
+
+{
+  "userId":101,
+  "userName":"Ravi",
+  "email":"ravi@gmail.com",
+  "gender":"Male"
+}
+
+Response Body:
+
+User Updated Successfully!
+
+DELETE Request(DELETE)
+-----------
+url:http://localhost:8989/SpringREST_01_IntegrationApp/rest/delete?uid=101
+
+Response Body:
+
+User Deleted Successfully!
+
+

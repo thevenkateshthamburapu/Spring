@@ -1,0 +1,6 @@
+When we create two different factories. one factory cannot
+use the bean from another factory.If we want to use it.we 
+need to go for nested bean factory. one factory will be
+parent and another factory is child. child factory can 
+access the bean from parent factory but parent factory 
+cannot access the child factory.

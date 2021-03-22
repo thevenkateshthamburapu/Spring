@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="cp" class="com.springcore.bfpp.bean.ConnectionProvider">
+	<property name="driverCls" value="${driver}"></property>
+	<property name="pwd" value="${password}"></property>
+	<property name="uname" value="${username}"></property>
+	<property name="url" value="${url}"></property>
+	</bean>
+
+	<bean id="pph" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="DB.properties"></property>
+	</bean>
+	
+	<!-- if we have multiple properties files we use
+	
+	<property name="locations">
+			<list>
+				<value>DB.properties</value>
+				<value>JavaMail.properties</value>
+				<value>log4j.properties</value>
+			</list>
+		</property>
+		in pph bean
+		 -->
+	
+	
+	
+	
+</beans>
+ 

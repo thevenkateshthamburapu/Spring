@@ -1,0 +1,5 @@
+user.name.empty=Enter name.
+user.email.empty=Enter email id.
+user.email.invalid=Enter a valid email id.
+user.languages.empty=Select at least one language.
+user.gender.empty=Select gender.

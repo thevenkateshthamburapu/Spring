@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="basemobile" class="com.springcore.bi.bean.Mobile" abstract="true">
+		<property name="color" value="gray"></property>
+		<property name="imeiNo" value="98758"></property>
+		<property name="mobileId" value="101"></property>
+		<property name="name" value="Iphone8"></property>
+		<property name="price" value="65000"></property>
+	</bean>
+	
+	<bean id="mobile2" class="com.springcore.bi.bean.Mobile" parent="basemobile">
+		<property name="mobileId" value="102"></property>
+		<property name="imeiNo" value="75698"></property>
+		<property name="color" value="gold"></property>
+	</bean>
+	
+	<bean id="mobile3" class="com.springcore.bi.bean.Mobile" parent="basemobile">
+		<property name="mobileId" value="103"></property>
+		<property name="imeiNo" value="87564"></property>
+		<property name="color" value="silver"></property>
+	</bean>	
+	
+	<bean id="mobile4" class="com.springcore.bi.bean.Mobile" parent="basemobile">
+		<property name="mobileId" value="104"></property>
+		<property name="imeiNo" value="56987"></property>
+		<property name="color" value="red"></property>
+	</bean>
+	
+</beans>

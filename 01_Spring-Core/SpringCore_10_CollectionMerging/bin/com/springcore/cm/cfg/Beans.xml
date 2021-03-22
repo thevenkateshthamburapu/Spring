@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="standupcal" class="com.springcore.cm.bean.Meeting">
+		<property name="meetingType" value="Standup Meeting"></property>
+		<property name="participants">
+			<set value-type="java.lang.String">
+				<value>Venkatesh</value>
+				<value>Nagaraju</value>
+				<value>Venu Gopal</value>
+			</set>
+	</property>
+	</bean>
+	
+	<bean id="weeklycal" class="com.springcore.cm.bean.Meeting" parent="standupcal">
+		<property name="meetingType" value="Weekly Meeting"></property>
+		<property name="participants">
+			<set value-type="java.lang.String" merge="true">
+				<value>Ashok</value>
+				<value>Raja Sekhar</value>
+			</set>
+		</property>
+	</bean>
+	
+</beans>

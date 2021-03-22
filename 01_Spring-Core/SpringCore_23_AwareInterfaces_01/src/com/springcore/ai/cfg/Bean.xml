@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+		<bean id="person" class="com.springcore.ai.bean.PersonInfo">
+		<property name="email" value="venky4789@yahoo.com" />
+		<property name="phno" value="797567979" />
+		<property name="name" value="Venkatesh" />
+	</bean>
+
+	<bean id="orderinfo" class="com.springcore.ai.bean.OrderInfo">
+		<property name="orderId" value="OD686868" />
+		<property name="price" value="15000.00" />
+		<property name="itemNames" value="Mouse,Keyboard" />
+	</bean>
+
+	<bean id="addinfo" class="com.springcore.ai.bean.AddressInfo">
+		<property name="addrLine1" value="Sr Nagr" />
+		<property name="city" value="Hyd" />
+		<property name="zip" value="6005" />
+	</bean>
+
+	<bean id="bluedart" class="com.springcore.ai.bean.BlueDartDeliverService" />
+	<bean id="dtdc" class="com.springcore.ai.bean.DTDCDeliverService" />
+
+	<bean id="ordermanager" class="com.springcore.ai.bean.OrderManager">
+		<property name="ainfo" ref="addinfo" />
+		<property name="oinfo" ref="orderinfo" />
+		<property name="pinfo" ref="person" />
+	</bean>
+	
+
+</beans>

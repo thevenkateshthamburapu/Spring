@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="rocket" class="com.springcore.nbf.bean.Rocket">
+		<property name="fuel" ref="fuel1"></property>
+		<property name="id" value="IRNSS-1H"></property>
+		<property name="name" value="PSLV-C39"></property>
+	</bean>
+
+</beans>

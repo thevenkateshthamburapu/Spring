@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" name="person1,person2,p,5" class="com.springcore.ba.bean.Person">
+	<property name="personId" value="101"></property>
+	<property name="personEmail" value="venky4789@yahoo.com"></property>
+	<property name="personName" value="venkateh"></property>
+	</bean>
+	
+	<!--   normally it acccess by the one name.
+		 here we pass the alias name as "p,5". mentation 
+		 that the both are not different so we use here
+		 as single name only -->
+	<alias name="person" alias="p,5"/>
+	
+</beans>

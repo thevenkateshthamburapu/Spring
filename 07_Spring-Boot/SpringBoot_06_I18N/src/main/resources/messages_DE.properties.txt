@@ -1,0 +1,7 @@
+welcome.message=Willkommen bei der Demo-Bewerbung
+language.change=Sprache ändern
+lang.eng=Englisch
+lang.de= Deutsche
+lang.fr=Francis
+lang.zh=\u4E2D\u6587
+lang.te=Telugu

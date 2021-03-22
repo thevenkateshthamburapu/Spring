@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="printerfactory" class="com.springcore.fm.ifm.bean.PrinterFactory"></bean>
+	
+	<bean id="printer" class="com.springcore.fm.ifm.bean.Printer" factory-method="createPrinter" factory-bean="printerfactory"></bean>
+	
+	<bean id="atm" class="com.springcore.fm.ifm.bean.ATM">
+		<property name="printer" ref="printer"></property>
+	</bean>
+	
+</beans>

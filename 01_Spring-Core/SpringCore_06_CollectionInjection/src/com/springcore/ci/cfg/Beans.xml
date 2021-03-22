@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="person" class="com.springcore.ci.bean.Person">
+		<property name="personId" value="101"></property>
+		<property name="personName" value="venkatesh"></property>
+
+		<property name="visitedPlaces">
+			<list value-type="java.lang.String">
+				<value>Hyderabad</value>
+				<value>Bangalore</value>
+				<value>Chennai</value>
+			</list>
+		</property>
+
+		<property name="courses">
+			<set value-type="java.lang.String">
+				<value>Java</value>
+				<value>Oracle</value>
+				<value>HTML</value>
+			</set>
+		</property>
+
+		<property name="parents">
+			<map key-type="java.lang.String" value-type="java.lang.String">
+				<entry key="father" value="Subrahmanyam"></entry>
+				<entry key="monther" value="Padmamma"></entry>
+			</map>
+		</property>
+
+		<property name="emails">
+			<props>
+				<prop key="office">venky4879@gmail.com</prop>
+				<prop key="home">venky4789@yahoo.com</prop>
+			</props>
+		</property>
+
+	</bean>
+
+</beans>

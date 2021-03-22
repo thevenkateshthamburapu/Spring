@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="robot" class="com.springcore.baw.byname.bean.Robot" autowire="byName">
+		<property name="robotId" value="A.X.L-01"></property>
+		<property name="robotType" value="Military Robot"></property>
+	</bean>	
+	
+	<bean id="chip" class="com.springcore.baw.byname.bean.Chip">
+		<property name="chipId" value="ARM51"></property>
+		<property name="chipType" value="64-Bit"></property>
+	</bean>
+	
+</beans>

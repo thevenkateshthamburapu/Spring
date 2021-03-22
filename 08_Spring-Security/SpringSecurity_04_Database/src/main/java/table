@@ -1,0 +1,57 @@
+CREATE  TABLE `mypractice`.`users` (
+
+  `username` VARCHAR(45) NOT NULL ,
+
+  `password` VARCHAR(45) NULL ,
+
+  `enabled` TINYINT NULL DEFAULT 1 ,
+
+  PRIMARY KEY (`username`) );
+  
+INSERT INTO `mypractice`.`users` (`username`, `password`, `enabled`) VALUES ('venkat', 'venkat', '1');
+
+INSERT INTO `mypractice`.`users` (`username`, `password`, `enabled`) VALUES ('vk', 'vnk', '1');
+
+INSERT INTO `mypractice`.`users` (`username`, `password`, `enabled`) VALUES ('raju', 'raju', '0');
+
+CREATE  TABLE `mypractice`.`user_roles` (
+
+  `user_role_id` INT NOT NULL AUTO_INCREMENT ,
+
+  `username` VARCHAR(45) NULL ,
+
+  `role` VARCHAR(45) NULL ,
+
+  PRIMARY KEY (`user_role_id`) ,
+
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC) ,
+
+  UNIQUE INDEX `role_UNIQUE` (`role` ASC) ,
+
+  INDEX `user_name` (`username` ASC) ,
+
+  CONSTRAINT `user_name`
+
+    FOREIGN KEY (`username` )
+
+    REFERENCES `mypractice`.`users` (`username` )
+
+    ON DELETE NO ACTION
+
+    ON UPDATE NO ACTION);
+
+
+
+
+
+INSERT INTO `mypractice`.`user_roles` (`username`, `role`) VALUES ('venkat', 'ROLE_USER');
+
+INSERT INTO `mypractice`.`user_roles` (`username`, `role`) VALUES ('vk', 'ROLE_USER');
+
+INSERT INTO `mypractice`.`user_roles` (`username`, `role`) VALUES ('raju', 'ROLE_USER');
+
+INSERT INTO `mypractice`.`user_roles` (`username`, `role`) VALUES ('venkat', 'ROLE_ADMIN');
+
+
+  
+  

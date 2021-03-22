@@ -1,0 +1,7 @@
+welcome.message=Welcome to Demo Application
+language.change=Choose Language
+lang.eng=English
+lang.de=German
+lang.fr=French
+lang.zh=\u4E2D\u6587
+lang.te=Telugu

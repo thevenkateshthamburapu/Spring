@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="debit" class="com.springcore.ci.bean.DebitCardPayment"></bean>
+	<bean id="ccp" class="com.springcore.ci.bean.CrediCardPayment"></bean>
+	<bean id="paymentcontext" class="com.springcore.ci.bean.PaymentContext">
+		<constructor-arg name="paymentService" ref="ccp"></constructor-arg>
+	</bean>
+
+</beans>

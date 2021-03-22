@@ -1,0 +1,12 @@
+create table book_store(book_id number(10) primary key,
+book_name varchar2(50),book_price number(10,2),
+book_isbn varchar2(10),author_name varchar2(20)
+)
+			
+			or
+
+create table book_store(book_id number(10),
+book_name varchar2(50),book_price number(10,2),
+book_isbn varchar2(10),author_name varchar2(20),
+primary key(book_id)
+)			

@@ -1,0 +1,17 @@
+# Root logger option
+log4j.rootLogger=INFO,ServerStartLogFileAppender
+log4j.logger.org.springframework=ERROR,ServerStartLogFileAppender
+log4j.logger.com.security.SpringSecurityProjectApplication=ERROR,ServerStartLogFileAppender
+log4j.logger.com.security=DEBUG,fileAppender
+
+# Direct log messages to a log file
+log4j.appender.fileAppender=org.apache.log4j.RollingFileAppender
+log4j.appender.fileAppender.File=SpringSecurityLogMessages.log
+log4j.appender.fileAppender.layout=org.apache.log4j.PatternLayout
+log4j.appender.fileAppender.layout.ConversionPattern=%d %p %-4r [%t] %-5p %c %x - %m%n
+
+
+log4j.appender.ServerStartLogFileAppender=org.apache.log4j.RollingFileAppender
+log4j.appender.ServerStartLogFileAppender.File=SecurityServerStartLogFile.log
+log4j.appender.ServerStartLogFileAppender.layout=org.apache.log4j.PatternLayout
+log4j.appender.ServerStartLogFileAppender.layout.ConversionPattern=%d %p %-4r [%t] %-5p %c %x - %m%n

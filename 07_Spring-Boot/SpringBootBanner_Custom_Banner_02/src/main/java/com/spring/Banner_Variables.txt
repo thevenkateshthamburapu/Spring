@@ -1,0 +1,24 @@
+
+Banner Variables
+To display additional information with banner on startup, spring boot provides banner variables as follows.
+
+${application.version} : Picks the version number of our application from the property Implementation-Version configured in MANIFEST.MF file.
+${application.formatted-version} : Picks the version number of our application configured in MANIFEST.MF file that will be (surrounded with brackets and prefixed with v).
+${application.title} : Picks the application title from the property Implementation-Title configured in MANIFEST.MF file.
+${spring-boot.version} : It displays the spring boot version that we are using such as 1.4.3.RELEASE .
+${spring-boot.formatted-version} : It displays the Spring Boot version that we are using formatted for display (surrounded with brackets and prefixed with v) such as example (v1.4.3.RELEASE).
+${AnsiColor.NAME} : It is used to make colorful banner where NAME is an ANSI escape code. Find the values for NAME from the link
+${AnsiBackground.NAME} : It is used to change banner background color where NAME is an ANSI escape code. Find the values for NAME from the link.
+${AnsiStyle.NAME} : It is used to change style of banner where NAME is an ANSI escape code. Find the values for NAME from the link.
+
+We need to configure above properties in banner.txt file or in the banner file configured by banner.location in application property file. Now we will discuss a sample example. Find our banner.txt file using banner variables.
+resources/banner.txt
+=========================
+      Custom Banner
+=========================  
+Application Version : ${application.version}
+Application Formatted Version : ${application.formatted-version}
+Application Title : ${application.title}
+Spring Boot Version : ${spring-boot.version}
+Spring Boot Formatted Version : ${spring-boot.formatted-version}
+============================================== 
