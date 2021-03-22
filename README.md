@@ -1,2 +1,2 @@
 # Spring
-Spring Workspace
+Spring Workspace (examples)
